@@ -1,0 +1,25 @@
+namespace HelloWorld is
+
+    // This is a very simple ghul application: it simply writes some text to the console     
+    class Main is
+        entry() static is
+            @IL.entrypoint() // this tells the runtime that program excution should start here 
+            let writer = new HelloWorldWriter();
+
+            writer.write_hello_world();
+        si
+    si
+
+    class HelloWorldWriter is
+        init() is
+        si
+
+        write_hello_world() is
+            let list = ["Hello", " ", "World", "!", "\n"];
+
+            for s in list do
+                System.Console.write(s);
+            od
+        si        
+    si
+si
